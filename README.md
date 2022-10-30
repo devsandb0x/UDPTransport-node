@@ -3,7 +3,7 @@ Reliable udp tranport for node
 
 
 ```javascript
-let udpSocket = new UDPTransport({})  
+let udpSocket = new UDPTransport({}) //port:33333, address:'127.0.0.1', packetSize:1400
 
 udpSocket.setRemote({port:serverBport, address:serverBaddr})  
 
