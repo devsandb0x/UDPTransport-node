@@ -4,7 +4,8 @@ Reliable udp tranport for node
 
 ```javascript
 let udpSocket = new UDPTransport({})  
-    udpSocket.setRemote({port:serverBport, address:serverBaddr})  
+
+udpSocket.setRemote({port:serverBport, address:serverBaddr})  
 
 udpSocket.on('message', async(data, rinfo)=>{
   console.log('msg from serverB', {data,rinfo})
