@@ -1,5 +1,5 @@
 # UDPTransport-node
-Reliable udp tranport for node
+Reliable udp transport for node
 
 
 ```javascript
@@ -10,8 +10,10 @@ udpSocket.setRemote({port:serverBport, address:serverBaddr})
 udpSocket.on('message', async(data, rinfo)=>{
   console.log('msg from serverB', {data,rinfo})
 }).on('resending', ()=>{ 
+  //pause anything if needed 
   console.log('missing packet request, resending...')
 }).on('sync', ()=>{
+  //resume
   console.log('missing packet resended, insync now')  
 }).on('chunkSent', ()=>{ } )
 
